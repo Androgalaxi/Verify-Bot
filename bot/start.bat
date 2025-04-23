@@ -2,7 +2,7 @@
 title Discord Bot - Always Online
 echo Starting the bot...
 :loop
-python (insert your file path to the bat file here)
+python bot.py
 echo Bot has stopped. Restarting in 60 seconds...
 timeout /t 60 >nul
 goto loop
