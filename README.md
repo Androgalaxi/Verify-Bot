@@ -10,9 +10,9 @@ Thanks for viewing this page!
 - Step 4: Open and edit the start.bat file by adding your file path where the start.bat file is located. Once you place your file path save the changes.
 - Step 5: Go to the [Discord Developer Portal](https://discord.com/developers/applications) and create your own bot
 - Step 6: Grab your bots token and navigate to OAuth2 and select the Discord Provided Link then for Scopes select bot. For bot permissions select Send Messages, View Channels, Manage Roles Manage Messages, and Read Message History.
-- Step 7: At the bottom of the bot.py file, edit the part that says "YOUR_TOKEN" and paste in your bots token
-- Step 8: In the terminal type in either "pip install discord.py" or python -m pip install discord.py (assuming you already have Python installed to your system)
-- Step 9: Open the start.bat file
+- Step 7: At the bottom of the bot.py file, edit the part that says `"YOUR_TOKEN"` and paste in your bots token
+- Step 8: In the terminal type in either `pip install discord.py` or `python -m pip install discord.py` (assuming you already have Python installed to your system)
+- Step 9: Open the start.bat file (or run `python bot.py` or replace `bot.py` with the directory into it if your are not in the directory)
 - Step 10: Test and ensure the bot works
 
 For any issues submit and issue in the Issues page.
