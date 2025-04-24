@@ -1,4 +1,12 @@
 import discord
+import os
+try:
+    from dotenv import load_dotenv
+    # Load environment variables from a .env file
+    load_dotenv()
+    print("dotenv is loaded successfully.")
+except ImportError:
+    print("python-dotenv is not installed. Skipping dotenv setup.")
 from discord.ext import commands
 
 intents = discord.Intents.default()
@@ -9,9 +17,9 @@ intents.message_content = True
 
 bot = commands.Bot(command_prefix="&", intents=intents)
 
-SERVER_ID = 1234567890  # Replace with your server ID
-CHANNEL_ID = 1234567890  # Replace with your channel ID
-ROLE_ID = 1234567890  # Replace with your role ID
+SERVER_ID = os.getenv("SERVER_ID") or "1234567890" #REPLACE ID's IN .env AND HERE, THIS IS ALL YOU NEED THOUGH.
+CHANNEL_ID = os.getenv("CHANNEL_ID") or "1234567890"
+ROLE_ID = os.getenv("ROLE_ID") or "1234567890"
 
 @bot.event
 async def on_message(message):
@@ -35,4 +43,4 @@ async def on_message(message):
                 print(f"Role with ID '{ROLE_ID}' not found in the server.")
         await message.delete()
 
-bot.run("BOT_TOKEN")
+bot.run(os.getenv("BOT_TOKEN") or "BOT_TOKEN") # REPLACE `or "BOT_TOKEN"` with `or token` if you have a token variable, or with your actual token string within quotations
