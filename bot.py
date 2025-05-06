@@ -17,7 +17,7 @@ async def on_message(message):
         return
 
     if message.guild and message.guild.id == SERVER_ID and message.channel.id == CHANNEL_ID:
-        if message.content.lower() == "voice":
+        if message.content.lower() == "cherry": #The default keyword is cherry. Change it as you wish.
             role = message.guild.get_role(ROLE_ID)
             if role:
                 if role not in message.author.roles:
